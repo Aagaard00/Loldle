@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import AppBar from './components/AppBar.vue'
 </script>
 
@@ -16,13 +15,10 @@ import AppBar from './components/AppBar.vue'
 
 <style scoped>
 header {
-  display: inline-flex;
-  align-items: center;
-  justify-content: right;
-  background-color: var(--color-background);
   width: 100%;
-  max-height: 100%;
+
   padding: 0.5rem;
+  border-bottom: 2px solid var(--color-border)
 }
 
 body {

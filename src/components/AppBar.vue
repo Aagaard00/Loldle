@@ -1,26 +1,43 @@
-<script>
+<script setup lang="ts">
 import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <img alt="Vue logo" class="logo" src="@/assets/loldle_logo_black.svg" width="55" height="55" />
+  <div class="container">
+    <a class="brand" href="/">
+      <img class="logo" src="@/assets/loldle_logo_black.svg" width="45" height="45" />
+      <div>LoLdle</div>
+    </a>
 
-  <div class="title">Loldle by Vue.js</div>
-
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-  </nav>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: x-large;
+  white-space: nowrap;
+}
+
 .logo {
-  display: block;
-  margin: 0 auto 0 0;
+  margin-right: 0.5rem;
 }
 
 nav {
-  width: 100%;
   font-size: 1rem;
   text-align: center;
   margin-right: 1rem;
