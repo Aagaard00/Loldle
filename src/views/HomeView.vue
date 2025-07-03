@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
@@ -7,3 +6,7 @@ import TheWelcome from '../components/TheWelcome.vue'
     <h1>This is a home page</h1>
   </div>
 </template>
+
+<style scoped>
+
+</style>

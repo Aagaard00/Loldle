@@ -4,3 +4,8 @@
   font-weight: normal;
   background-color: var(--color-background);
 }
+
+.row{
+  display: flex;
+  flex-direction: row;
+}

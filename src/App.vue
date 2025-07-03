@@ -4,26 +4,33 @@ import AppBar from './components/AppBar.vue'
 </script>
 
 <template>
-  <header>
-    <AppBar />
-  </header>
-
-  <body>
-    <RouterView />
-  </body>
+  <div class="layout">
+    <header>
+      <AppBar />
+    </header>
+    <main>
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
-  width: 100%;
-
-  padding: 0.5rem;
-  border-bottom: 2px solid var(--color-border)
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-body {
+header {
   width: 100%;
-  max-height: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-color: var(--color-border);
+}
+
+main {
+  flex: 1;
+  padding: 0 0.5rem;
 }
 </style>
