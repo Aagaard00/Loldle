@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const emit = defineEmits<{
-  (emit: "click", payload: MouseEvent): void
+  (emit: "click", payload: MouseEvent): void;
 }>();
 </script>
 
 <template>
-  <span class="avatar" @click="event => emit('click', event)">
+  <span class="avatar" @click="(event) => emit('click', event)">
     <!-- Hardcoded placeholder -->
     <img src="@/assets/smoll-platypus.png" />
   </span>

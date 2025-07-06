@@ -1,11 +1,11 @@
-@import './base.css';
+@import "./base.css";
 
 #app {
   font-weight: normal;
   background-color: var(--color-background);
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }

@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import IconBurgerMenu from './icons/IconBurgerMenu.vue';
+import IconBurgerMenu from "./icons/IconBurgerMenu.vue";
 
 const emit = defineEmits<{
-  (emit: "click", payload: MouseEvent): void
+  (emit: "click", payload: MouseEvent): void;
 }>();
 </script>
 
 <template>
-  <button class="burger-menu" @click="event => emit('click', event)">
+  <button class="burger-menu" @click="(event) => emit('click', event)">
     <IconBurgerMenu />
   </button>
 </template>

@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import AvatarCircle from './AvatarCircle.vue';
-import BurgerMenuButton from './BurgerMenuButton.vue';
-import placeholderHandler from '@/utils/placeholderHandler';
+import AvatarCircle from "./AvatarCircle.vue";
+import BurgerMenuButton from "./BurgerMenuButton.vue";
+import placeholderHandler from "@/utils/placeholderHandler";
 </script>
 
 <template>
   <div class="container">
-    <div class="row" style="align-items: center; gap: 0.5rem;">
-      <BurgerMenuButton @click="placeholderHandler('Open site navigation menu')"/>
+    <div class="row" style="align-items: center; gap: 0.5rem">
+      <BurgerMenuButton @click="placeholderHandler('Open site navigation menu')" />
       <a class="brand" href="/">
         <img class="logo" src="@/assets/loldle_logo_black.svg" />
         <div>LoLdle</div>
       </a>
     </div>
 
-    <AvatarCircle class="avatar" @click="placeholderHandler('Open user settings')"/>
+    <AvatarCircle class="avatar" @click="placeholderHandler('Open user settings')" />
   </div>
 </template>
 
