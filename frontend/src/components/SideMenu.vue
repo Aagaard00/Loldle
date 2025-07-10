@@ -40,5 +40,14 @@ defineProps<{
   border-bottom-right-radius: 1rem;
 
   background-color: var(--color-background);
+
+  animation-name: SlideInRight;
+  animation-duration: 0.25s;
+}
+
+@keyframes SlideInRight {
+  0% {
+    transform: translateX(-100%);
+  }
 }
 </style>
