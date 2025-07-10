@@ -45,6 +45,12 @@ defineProps<{
   animation-duration: 0.25s;
 }
 
+/* 
+  How the animation works:
+  1. Shift the entire element out of the screen to the left
+  2. Let it transition back into its original placement
+    - We do this by lettinh 100% default to { transform: none }
+*/
 @keyframes SlideInRight {
   0% {
     transform: translateX(-100%);
