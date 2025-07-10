@@ -5,6 +5,25 @@
   background-color: var(--color-background);
 }
 
+.button-simple {
+  min-height: 2rem;
+  min-width: 2rem;
+
+  border-style: none;
+  border-radius: 0.5rem;
+
+  background-color: var(--color-background);
+}
+
+.button-simple:hover {
+  background-color: var(--color-background-mute);
+}
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+}
+
 .row {
   display: flex;
   flex-direction: row;

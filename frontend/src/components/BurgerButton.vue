@@ -14,16 +14,20 @@ const emit = defineEmits<{
 
 <style scoped>
 .burger-menu {
+  height: 1.8rem;
+  width: 1.8rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   background-color: var(--color-background);
-  width: 1.8rem;
-  height: 1.8rem;
+
   padding: 0.2rem;
   border: 1px;
   border-style: solid;
   border-radius: 25%;
+  
   cursor: pointer;
 }
 

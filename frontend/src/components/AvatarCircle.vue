@@ -13,20 +13,24 @@ const emit = defineEmits<{
 
 <style scoped>
 .avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+
   border: 1px;
   border-style: solid;
   border-radius: 50%;
+
   overflow: hidden;
+
   cursor: pointer;
 }
 
 .avatar img {
-  width: inherit;
   height: inherit;
+  width: inherit;
 }
 </style>

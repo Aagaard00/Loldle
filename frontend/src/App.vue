@@ -16,14 +16,17 @@ import AppBar from "./components/AppBar.vue";
 
 <style scoped>
 .layout {
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 header {
   width: 100%;
+
   padding: 0.7rem;
+  
   border-bottom: 2px;
   border-bottom-style: solid;
   border-color: var(--color-border);
