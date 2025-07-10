@@ -4,6 +4,7 @@ import AvatarCircle from "./AvatarCircle.vue";
 import BurgerButton from "./BurgerButton.vue";
 import SideMenu from "./SideMenu.vue";
 import placeholderHandler from "@/utils/placeholderHandler";
+import NavMenu from "./NavMenu.vue";
 
 const showMenu = ref(false);
 </script>
@@ -12,11 +13,11 @@ const showMenu = ref(false);
   <div class="container">
     <div class="row" style="align-items: center; gap: 0.5rem">
       <BurgerButton @click="() => showMenu = true" />
-      <SideMenu :show="showMenu" :close="() => showMenu = false"/>
-      <a class="brand" href="/">
+      <NavMenu :show="showMenu" :close="() => showMenu = false" />
+      <RouterLink class="brand" to="/">
         <img class="logo" src="@/assets/loldle_logo_black.svg" />
         <div>LoLdle</div>
-      </a>
+      </RouterLink>
     </div>
 
     <AvatarCircle class="avatar" @click="placeholderHandler('Open user settings')" />
