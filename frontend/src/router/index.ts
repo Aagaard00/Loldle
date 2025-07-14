@@ -7,15 +7,34 @@ const router = createRouter({
     {
       path: "/",
       name: "Home",
+      // Eager-loaded when app starts
       component: HomeView,
     },
     {
       path: "/classic",
       name: "Classic",
-      // route level code-splitting
-      // this generates a separate chunk (Classic.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      // Lazy-loaded when the route is visited.
       component: () => import("../views/ClassicGameView.vue"),
+    },
+    {
+      path: "/quote",
+      name: "Quote",
+      component: () => import("../views/QuoteGameView.vue"),
+    },
+    {
+      path: "/ability",
+      name: "Ability",
+      component: () => import("../views/AbilityGameView.vue"),
+    },
+    {
+      path: "/emoji",
+      name: "Emoji",
+      component: () => import("../views/EmojiGameView.vue"),
+    },
+    {
+      path: "/splash",
+      name: "Splash",
+      component: () => import("../views/SplashGameView.vue"),
     },
   ],
 });

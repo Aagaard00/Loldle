@@ -18,10 +18,10 @@ const routes: { path: string, name: string, icon: Component }[] =
   [
     { path: "/", name: "Home", icon: IconHome },
     { path: "/classic", name: "Classic", icon: IconClassic },
-    { path: "/", name: "Quote", icon: IconQuote },
-    { path: "/", name: "Ability", icon: IconAbility },
-    { path: "/", name: "Emoji", icon: IconSmiley },
-    { path: "/", name: "Splash", icon: IconSplash },
+    { path: "/quote", name: "Quote", icon: IconQuote },
+    { path: "/ability", name: "Ability", icon: IconAbility },
+    { path: "/emoji", name: "Emoji", icon: IconSmiley },
+    { path: "/splash", name: "Splash", icon: IconSplash },
   ]
 </script>
 
