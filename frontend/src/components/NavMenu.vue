@@ -1,26 +1,34 @@
 <script setup lang="ts">
+import type { Component } from 'vue';
 import SideMenu from './SideMenu.vue';
-import logo from '@/assets/loldle_logo_black.svg';
+import IconAbility from './icons/IconAbility.vue';
+import IconClassic from './icons/IconClassic.vue';
+import IconHome from './icons/IconHome.vue';
+import IconLoldle from './icons/IconLoldle.vue';
+import IconQuote from './icons/IconQuote.vue';
+import IconSmiley from './icons/IconSmiley.vue';
+import IconSplash from './icons/IconSplash.vue';
+
 const props = defineProps<{
   show: boolean;
   close: () => void;
 }>();
 
-const routes: { path: string, name: string, img: string }[] =
+const routes: { path: string, name: string, icon: Component }[] =
   [
-    { path: "/", name: "Home", img: logo },
-    { path: "/classic", name: "Classic", img: logo },
-    { path: "/", name: "Quote", img: logo },
-    { path: "/", name: "Ability", img: logo },
-    { path: "/", name: "Emoji", img: logo },
-    { path: "/", name: "Splash", img: logo },
+    { path: "/", name: "Home", icon: IconHome },
+    { path: "/classic", name: "Classic", icon: IconClassic },
+    { path: "/", name: "Quote", icon: IconQuote },
+    { path: "/", name: "Ability", icon: IconAbility },
+    { path: "/", name: "Emoji", icon: IconSmiley },
+    { path: "/", name: "Splash", icon: IconSplash },
   ]
 </script>
 
 <template>
   <SideMenu :show="show" :close="close">
     <div class="menu-header">
-      <img class="logo" src="@/assets/loldle_logo_black.svg" />
+      <IconLoldle class="logo" />
       <button class="button-simple" @click="close">X</button>
     </div>
 
@@ -28,7 +36,7 @@ const routes: { path: string, name: string, img: string }[] =
       <nav class="nav" v-for="route in routes">
         <div @click="close">
           <RouterLink class="nav-link" :to="route.path">
-            <img :src="route.img" />
+            <component class="nav-icon" :is="route.icon" />
             <p>{{ route.name }}</p>
           </RouterLink>
         </div>
@@ -81,7 +89,7 @@ const routes: { path: string, name: string, img: string }[] =
   background-color: var(--color-background-mute);
 }
 
-.nav-link img {
+.nav-icon {
   height: 1.5rem;
   width: 1.5rem;
 }

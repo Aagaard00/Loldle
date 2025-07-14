@@ -2,8 +2,8 @@
 import { ref } from "vue";
 import AvatarCircle from "./AvatarCircle.vue";
 import BurgerButton from "./BurgerButton.vue";
-import SideMenu from "./SideMenu.vue";
 import placeholderHandler from "@/utils/placeholderHandler";
+import IconLoldle from "./icons/IconLoldle.vue";
 import NavMenu from "./NavMenu.vue";
 
 const showMenu = ref(false);
@@ -15,7 +15,7 @@ const showMenu = ref(false);
       <BurgerButton @click="() => showMenu = true" />
       <NavMenu :show="showMenu" :close="() => showMenu = false" />
       <RouterLink class="brand" to="/">
-        <img class="logo" src="@/assets/loldle_logo_black.svg" />
+        <IconLoldle class="logo" />
         <div>LoLdle</div>
       </RouterLink>
     </div>
