@@ -3,6 +3,7 @@ import type { Component } from 'vue';
 import SideMenu from './SideMenu.vue';
 import IconAbility from './icons/IconAbility.vue';
 import IconClassic from './icons/IconClassic.vue';
+import IconCross from './icons/IconCross.vue';
 import IconHome from './icons/IconHome.vue';
 import IconLoldle from './icons/IconLoldle.vue';
 import IconQuote from './icons/IconQuote.vue';
@@ -29,7 +30,9 @@ const routes: { path: string, name: string, icon: Component }[] =
   <SideMenu :show="show" :close="close">
     <div class="menu-header">
       <IconLoldle class="logo" />
-      <button class="button-simple" @click="close">X</button>
+      <button class="button-simple" @click="close">
+        <IconCross />
+      </button>
     </div>
 
     <div class="menu-body">

@@ -21,12 +21,14 @@ const emit = defineEmits<{
   align-items: center;
   justify-content: center;
 
+  color: var(--color-text);
   background-color: var(--color-background);
 
   padding: 0.2rem;
   border: 1px;
   border-style: solid;
   border-radius: 25%;
+  border-color: var(--color-border);
   
   cursor: pointer;
 }
