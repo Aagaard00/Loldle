@@ -5,7 +5,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <span class="avatar" @click="(event) => emit('click', event)">
+  <span class="avatar" @click="emit('click', $event)">
     <!-- Hardcoded placeholder -->
     <img src="@/assets/smoll-platypus.png" />
   </span>

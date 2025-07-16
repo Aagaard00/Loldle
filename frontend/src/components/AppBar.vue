@@ -43,6 +43,7 @@ const showMenu = ref(false);
   white-space: nowrap;
 
   gap: 0.5rem;
+  
   padding: 0 0.2rem;
 
   border-radius: 0.5rem;

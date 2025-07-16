@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   show: boolean;
   close: () => void;
 }>();
@@ -17,12 +17,12 @@ defineProps<{
 
 <style scoped>
 .overlay {
+  position: fixed;
   z-index: 9999;
 
   height: 100%;
   width: 100%;
 
-  position: fixed;
   top: 0;
   left: 0;
 

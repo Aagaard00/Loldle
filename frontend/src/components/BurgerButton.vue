@@ -7,7 +7,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <button class="burger-menu" @click="(event) => emit('click', event)">
+  <button class="burger-menu" @click="emit('click', $event)">
     <IconBurgerMenu />
   </button>
 </template>

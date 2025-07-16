@@ -54,10 +54,8 @@ const routes: { path: string, name: string, icon: Component }[] =
 
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
   align-items: center;
-
 }
 
 .menu-body {
@@ -76,8 +74,9 @@ const routes: { path: string, name: string, icon: Component }[] =
   display: flex;
   flex-direction: row;
   align-items: center;
+  
   gap: 0.5rem;
-
+  
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
