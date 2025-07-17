@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Champion } from '@/interfaces/ChampionInterface';
-import placeholderHandler from '@/utils/placeholderHandler';
 import { computed, ref, type ComputedRef, type Ref } from 'vue';
 import IconArrowRight from './icons/IconArrowRight.vue';
 
@@ -103,7 +102,7 @@ button:hover {
   position: absolute;
   z-index: 1;
 
-  max-height: 15rem;
+  max-height: 15.1rem;
   width: 15.25rem;
 
   overflow-x: hidden;
@@ -151,4 +150,27 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
+
+::-webkit-scrollbar {
+  width: 0.85rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-border);
+
+  border: 1px;
+  border-style: none;
+  border-radius: 0.25rem;
+  border-color: var(--color-text);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-hover);
+
+  border: 1px;
+  border-style: none;
+  border-radius: 0.25rem;
+  border-color: var(--color-text);
+}
+
 </style>
