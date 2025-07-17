@@ -1,4 +1,4 @@
-export interface ClassicChampion {
+export interface Champion {
   name: string;
   imageUrl: string;
   gender: string;

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ClassicChampion } from '@/interfaces/ChampionInterfaces';
+import type { Champion } from '@/interfaces/ChampionInterface';
 import placeholderHandler from '@/utils/placeholderHandler';
 import { computed, ref, type ComputedRef, type Ref } from 'vue';
 import IconArrowRight from './icons/IconArrowRight.vue';
 
 const props = defineProps<{
-  champions: ClassicChampion[];
+  champions: Champion[];
 }>();
 
 const emit = defineEmits<{
@@ -15,7 +15,7 @@ const emit = defineEmits<{
 const showDropdown: Ref<boolean> = ref(false);
 const inputText: Ref<string> = ref("");
 
-const filteredChampions: ComputedRef<ClassicChampion[]> = computed(() => {
+const filteredChampions: ComputedRef<Champion[]> = computed(() => {
   const searchString = inputText.value.toLowerCase();
   return props.champions.filter(x => x.name.toLowerCase().includes(searchString))
 });
