@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import ChampionSelector from '@/components/ChampionSelector.vue';
+import GuessedChampionList from '@/components/GuessedChampionList.vue';
 import type { Champion } from '@/interfaces/ChampionInterface';
 import useChampionStore from '@/stores/useChampionStore';
-import placeholderHandler from '@/utils/placeholderHandler';
 import { computed, ref, type ComputedRef, type Ref } from 'vue';
 
 const answers: Ref<Set<String>> = ref(new Set());
@@ -29,11 +29,7 @@ function makeGuess(payload: { name: string }) {
 
     <ChampionSelector :champions="availableChampions" @guess="makeGuess" />
 
-    <div class="guess-container">
-      <div class="guess-item" v-for="champion in guessedChampions">
-        {{ champion.name }}
-      </div>
-    </div>
+    <GuessedChampionList style="margin-top: 1rem;" :guessed-champions="guessedChampions" />
   </div>
 </template>
 
@@ -46,17 +42,6 @@ function makeGuess(payload: { name: string }) {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-}
-
-.guess-container {
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-}
-
-.guess-item {
-  display: flex;
-  flex-direction: row;
 }
 
 .hint-text {

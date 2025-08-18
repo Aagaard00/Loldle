@@ -58,10 +58,9 @@ const filteredChampions: ComputedRef<Champion[]> = computed(() => {
 
 input {
   height: 2rem;
-  width: 13rem;
+  width: 20rem;
 
   padding-left: 0.5rem;
-  background-color: var(--color-background);
   color: var(--color-text);
 
   border: 1px;
@@ -75,14 +74,13 @@ input {
   z-index: 1;
 
   max-height: 15.1rem;
-  width: 15.25rem;
+  width: 22.25rem;
 
-  overflow-x: hidden;
+  background-color: var(--color-background);
+
   overflow-y: auto;
 
   margin-top: 0.15rem;
-
-  background-color: var(--color-background);
 
   border: 1px;
   border-style: solid;
@@ -100,8 +98,6 @@ input {
 
   gap: 0.5rem;
   padding: 0.5rem;
-
-  background-color: var(--color-background);
 
   cursor: pointer;
 }
