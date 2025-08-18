@@ -16,31 +16,23 @@ const inputText: Ref<string> = ref("");
 
 const filteredChampions: ComputedRef<Champion[]> = computed(() => {
   const searchString = inputText.value.toLowerCase();
-  return props.champions.filter(x => x.name.toLowerCase().includes(searchString))
+  return props.champions.filter(x => x.name.toLowerCase().startsWith(searchString))
 });
 </script>
 
 <template>
   <div class="container">
     <div class="input-container">
-      <input 
-        placeholder="Type a champions name..."
-        v-model="inputText"
-        @focus="showDropdown = true"
-        @blur="showDropdown = false"
-      />
-      <button @click="emit('guess', { name: filteredChampions[0].name })">
+      <input placeholder="Type a champions name..." v-model="inputText" @focus="showDropdown = true"
+        @blur="showDropdown = false" />
+      <button :disabled="inputText.length === 0" @click="emit('guess', { name: filteredChampions[0].name })">
         <IconArrowRight />
       </button>
     </div>
 
     <div class="dropdown-container" v-show="showDropdown">
-      <div 
-        class="dropdown-item"
-        @mousedown="emit('guess', {name: champion.name})"
-        v-if="filteredChampions.length > 0"
-        v-for="champion in filteredChampions"
-      >
+      <div class="dropdown-item" @mousedown="emit('guess', { name: champion.name })" v-if="filteredChampions.length > 0"
+        v-for="champion in filteredChampions">
         <img class="champion-img" :src="champion.imageUrl" />
         {{ champion.name }}
       </div>
@@ -152,10 +144,10 @@ button:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 0.85rem;
+  width: 0.5rem;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-thumb {
   background-color: var(--color-border);
 
   border: 1px;
@@ -163,14 +155,4 @@ button:hover {
   border-radius: 0.25rem;
   border-color: var(--color-text);
 }
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-border-hover);
-
-  border: 1px;
-  border-style: none;
-  border-radius: 0.25rem;
-  border-color: var(--color-text);
-}
-
 </style>
