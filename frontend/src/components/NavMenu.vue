@@ -30,7 +30,7 @@ const routes: { path: string, name: string, icon: Component }[] =
   <SideMenu :show="show" :close="close">
     <div class="menu-header">
       <IconLoldle class="logo" />
-      <button class="button-simple" @click="close">
+      <button class="button-subtle" @click="close">
         <IconCross />
       </button>
     </div>
@@ -74,9 +74,9 @@ const routes: { path: string, name: string, icon: Component }[] =
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+
   gap: 0.5rem;
-  
+
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;

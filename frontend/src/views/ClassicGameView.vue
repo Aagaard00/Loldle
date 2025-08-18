@@ -17,7 +17,7 @@ const guessedChampions: ComputedRef<Champion[]> = computed((): Champion[] => {
   return championStore.getGuessedChampions(answers.value);
 })
 
-function makeGuess(payload: { name: string }){
+function makeGuess(payload: { name: string }) {
   answers.value.add(payload.name);
 }
 </script>
@@ -29,8 +29,10 @@ function makeGuess(payload: { name: string }){
 
     <ChampionSelector :champions="availableChampions" @guess="makeGuess" />
 
-    <div v-for="champion in guessedChampions">
-      {{ champion.name }}
+    <div class="guess-container">
+      <div class="guess-item" v-for="champion in guessedChampions">
+        {{ champion.name }}
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +46,17 @@ function makeGuess(payload: { name: string }){
   flex-direction: column;
   justify-content: start;
   align-items: center;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+}
+
+.guess-item {
+  display: flex;
+  flex-direction: row;
 }
 
 .hint-text {

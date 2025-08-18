@@ -5,21 +5,45 @@
   background-color: var(--color-background);
 }
 
-.button-simple {
+.button {
+  height: 2rem;
+  width: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  border: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: var(--color-text);
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-background-mute);
+}
+
+.button-subtle {
   min-height: 2rem;
   min-width: 2rem;
   
   display: flex;
+  justify-content: center;
   align-items: center;
 
-  border-style: none;
-  border-radius: 0.5rem;
-
-  color: var(--color-text);
   background-color: var(--color-background);
+  color: var(--color-text);
+
+  border-style: none;
+  border-radius: 0.25rem;
 }
 
-.button-simple:hover {
+.button-subtle:hover {
   background-color: var(--color-background-mute);
 }
 

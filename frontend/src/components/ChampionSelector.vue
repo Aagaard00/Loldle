@@ -25,7 +25,8 @@ const filteredChampions: ComputedRef<Champion[]> = computed(() => {
     <div class="input-container">
       <input placeholder="Type a champions name..." v-model="inputText" @focus="showDropdown = true"
         @blur="showDropdown = false" />
-      <button :disabled="inputText.length === 0" @click="emit('guess', { name: filteredChampions[0].name })">
+      <button class="button" :disabled="inputText.length === 0"
+        @click="emit('guess', { name: filteredChampions[0].name })">
         <IconArrowRight />
       </button>
     </div>
@@ -67,27 +68,6 @@ input {
   border-style: solid;
   border-radius: 0.25rem;
   border-color: var(--color-text);
-}
-
-button {
-  height: 2rem;
-  width: 2rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--color-background);
-  color: var(--color-text);
-
-  border: 1px;
-  border-style: solid;
-  border-radius: 0.25rem;
-  border-color: var(--color-text);
-}
-
-button:hover {
-  background-color: var(--color-background-mute);
 }
 
 .dropdown-container {
